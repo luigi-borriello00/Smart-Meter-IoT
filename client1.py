@@ -2,6 +2,8 @@
 """
 Created on Thu May  6 22:09:40 2021
 
+UDP Client1
+
 @author: Luigi
 """
 
@@ -12,7 +14,7 @@ client_ip = "192.168.1.2"
 
 # create the socket
 sock = sk.socket(sk.AF_INET, sk.SOCK_DGRAM)
-gateway_address = ("192.168.1.1", 1000)
+gateway_address = ("localhost", 10000)
 message = ""
 buffer = 4096
 
@@ -45,7 +47,7 @@ try:
     data, server = sock.recvfrom(buffer)
     finalTime = time.time() - startTime
     time.sleep(2)
-    print("Received Message:" % data.decode("utf8"))
+    print("Received Message: {}" .format(data.decode("utf8")))
     print("Time of UDP message {0} and the size of used buffer is {1}" .format(finalTime, buffer))
 except Exception as info:
     print(info)
