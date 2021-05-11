@@ -39,12 +39,13 @@ def connectToGateway(gateway_address):
         print("Sending info to Gateway on interface 192.168.1.0...")
         time.sleep(2)
         startTime = time.time()
+        
         sent = sock.sendto(message.encode(), gateway_address)
         print("Waiting the Gateway response...")
         data, server = sock.recvfrom(buffer)
         # Calculate the time to send the message
-        time.sleep(2)
         finalTime = time.time() - startTime
+        time.sleep(2)
         print("Received Message: {}" .format(data.decode("utf8")))
         print("UDP message's sending time {} and the size of used buffer is {}" .format(finalTime, buffer))
     except Exception as info:
