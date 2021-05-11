@@ -13,5 +13,5 @@ import IoT_Functions as iotF
 client_ip = "192.168.1.2"
 fileName = "DetectionsC1.txt"
 gateway_address = ("localhost", 10000)
-iotF.readDetections(client_ip, fileName)
-iotF.connectToGateway(gateway_address)
+message = iotF.readDetections(client_ip, fileName)
+iotF.connectToGateway(gateway_address, message)

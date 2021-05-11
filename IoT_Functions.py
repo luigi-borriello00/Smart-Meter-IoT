@@ -6,7 +6,6 @@ Created on Tue May 11 14:22:48 2021
 """
 import time
 import socket as sk
-import datetime
 
 def readDetections(client_ip, fileName):
     message = ""
@@ -28,12 +27,12 @@ def readDetections(client_ip, fileName):
     
     file.close()
     print("Detections readed correctly!")
+    return message
     
 # Send info to Gatway
-def connectToGateway(gateway_address):
+def connectToGateway(gateway_address, message):
     # Create the UDP socket
     sock = sk.socket(sk.AF_INET, sk.SOCK_DGRAM)
-    message = ""
     buffer = 4096
     try:
         print("Sending info to Gateway on interface 192.168.1.0...")
