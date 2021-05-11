@@ -18,6 +18,7 @@ buffer = 4096
 
 # read info from file
 file = open("Detections/DetectionsC3.txt", "r")
+print("IoT 3")
 print("Reading the detections from file...")
 time.sleep(2)
 
@@ -43,6 +44,7 @@ try:
     sent = sock.sendto(message.encode(), gateway_address)
     print("Waiting the Gateway response...")
     data, server = sock.recvfrom(buffer)
+    # Calculate the time to send the message
     finalTime = time.time() - startTime
     time.sleep(2)
     print("Received Message:" % data.decode("utf8"))

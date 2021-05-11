@@ -20,6 +20,7 @@ serverSocket.bind(("localhost", serverPort))
 
 # Listen Client request
 serverSocket.listen(1)
+print("SERVER CLOUD")
 print("Waiting on interface 10.10.10.0 on port {}..." .format(serverPort))
 
 # Waiting Gateway connection
