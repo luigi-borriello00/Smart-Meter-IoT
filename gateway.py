@@ -45,20 +45,4 @@ print("TCP message's sending time {} and the size of used buffer is {}" .format(
 print
 print("Closing connection")
 socket_cloud.close()
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
