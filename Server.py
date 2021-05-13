@@ -31,7 +31,7 @@ def connectToGateway():
     serverSocket.close()
 
 # TCP Server port and ip
-serverPort = 10000
+serverPort = 8002
 serverIp = '10.10.10.2'
 bufferSize = 4096
 connectToGateway()
