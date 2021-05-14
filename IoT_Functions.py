@@ -2,8 +2,11 @@
 """
 Created on Tue May 11 14:22:48 2021
 
+Functions for IoT
+
 @author: Luigi
 """
+
 import time
 import socket as sk
 
